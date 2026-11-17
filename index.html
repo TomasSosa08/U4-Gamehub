@@ -1,346 +1,596 @@
 
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GameHub: descubrí juegos, conectá con jugadores y formá parte de la comunidad gaming.">
+  <title>GAMEHUB | Level Up Your Game</title>
 
-    <title>GAMEHUB | Gaming Community</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 
 <body>
 
-    <!-- HEADER -->
-    <header>
-        <h1>GAMEHUB</h1>
-        <p>Your Gaming Universe</p>
+  <!-- NAVBAR -->
+  <header class="header">
+    <nav class="navbar container">
+      <a href="#home" class="logo">
+        GAME<span>HUB</span><span class="logo-dot">.</span>
+      </a>
 
-        <nav aria-label="Navegación principal">
-            <a href="#inicio">Inicio</a>
-            <a href="#registro">Registrarse</a>
-            <a href="#contacto">Soporte</a>
-        </nav>
-    </header>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+        ☰
+      </button>
 
-    <main>
+      <div class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#games">Discover Games</a>
+        <a href="#community">Community</a>
+        <a href="#join">Join Us</a>
+        <a href="#support">Support</a>
+      </div>
 
-        <!-- PRESENTACIÓN -->
-        <section class="presentacion" id="inicio">
-            <p>WELCOME TO GAMEHUB</p>
+      <a href="#join" class="nav-button">GET STARTED <span>↗</span></a>
+    </nav>
+  </header>
 
-            <h2>Enter the world of gaming.</h2>
+  <main>
 
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero-grid"></div>
+      <div class="hero-glow"></div>
+
+      <div class="container hero-content">
+        <div class="hero-text reveal">
+          <div class="eyebrow">
+            <span class="live-dot"></span>
+            YOUR NEXT GAMING DESTINATION
+          </div>
+
+          <h1>
+            PLAY MORE.<br>
+            <span>CONNECT.</span><br>
+            LEVEL UP.
+          </h1>
+
+          <p>
+            Discover new games, meet players from around the world
+            and become part of a community built for gamers.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#join" class="button button-primary">
+              JOIN THE COMMUNITY <span>↗</span>
+            </a>
+
+            <a href="#games" class="button button-outline">
+              EXPLORE GAMES <span>↓</span>
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div>
+              <strong>10K<span>+</span></strong>
+              <small>GAMERS</small>
+            </div>
+            <div>
+              <strong>50<span>+</span></strong>
+              <small>GAMES</small>
+            </div>
+            <div>
+              <strong>24<span>/7</span></strong>
+              <small>COMMUNITY</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="hero-image-frame">
+            <img
+              src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1200&q=85"
+              alt="Gaming setup with colorful lights"
+              class="hero-image"
+            >
+            <div class="image-overlay"></div>
+            <div class="image-label">THE GAME STARTS HERE</div>
+          </div>
+
+          <div class="floating-tag tag-top">
+            <span class="tag-icon">✦</span>
+            <div>
+              <strong>FIND YOUR SQUAD</strong>
+              <small>Play together</small>
+            </div>
+          </div>
+
+          <div class="floating-tag tag-bottom">
+            <span class="online-dot"></span>
+            <div>
+              <strong>COMMUNITY ONLINE</strong>
+              <small>Ready when you are</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#games" class="scroll-indicator">SCROLL TO EXPLORE <span>↓</span></a>
+    </section>
+
+    <!-- TICKER -->
+    <div class="ticker">
+      <div class="ticker-track">
+        <span>DISCOVER GAMES</span><b>✦</b>
+        <span>MEET PLAYERS</span><b>✦</b>
+        <span>BUILD YOUR SQUAD</span><b>✦</b>
+        <span>LEVEL UP</span><b>✦</b>
+        <span>DISCOVER GAMES</span><b>✦</b>
+        <span>MEET PLAYERS</span><b>✦</b>
+        <span>BUILD YOUR SQUAD</span><b>✦</b>
+        <span>LEVEL UP</span><b>✦</b>
+      </div>
+    </div>
+
+    <!-- GAMES -->
+    <section class="section games-section" id="games">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <span class="section-kicker">01 / THE COLLECTION</span>
+            <h2>FIND YOUR NEXT<br><span>ADVENTURE.</span></h2>
+          </div>
+          <p>
+            From competitive battles to open-world adventures,
+            discover games that match your style.
+          </p>
+        </div>
+
+        <div class="filter-bar reveal">
+          <span>EXPLORE BY CATEGORY</span>
+          <div class="filters">
+            <button class="filter-button active" data-filter="all">All Games</button>
+            <button class="filter-button" data-filter="action">Action</button>
+            <button class="filter-button" data-filter="sports">Sports</button>
+            <button class="filter-button" data-filter="adventure">Adventure</button>
+          </div>
+        </div>
+
+        <div class="games-grid">
+
+          <article class="game-card reveal" data-category="action">
+            <div class="game-image">
+              <img
+                src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=900&q=85"
+                alt="Competitive gaming setup"
+                loading="lazy"
+              >
+              <span class="game-category">ACTION</span>
+            </div>
+            <div class="game-info">
+              <div>
+                <h3>Fortnite</h3>
+                <p>Battle Royale · Multiplayer</p>
+              </div>
+              <span class="game-arrow">↗</span>
+            </div>
+          </article>
+
+          <article class="game-card reveal" data-category="adventure">
+            <div class="game-image">
+              <img
+                src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=900&q=85"
+                alt="Video game controller and screen"
+                loading="lazy"
+              >
+              <span class="game-category">ADVENTURE</span>
+            </div>
+            <div class="game-info">
+              <div>
+                <h3>Grand Theft Auto V</h3>
+                <p>Open World · Action</p>
+              </div>
+              <span class="game-arrow">↗</span>
+            </div>
+          </article>
+
+          <article class="game-card reveal" data-category="adventure">
+            <div class="game-image">
+              <img
+                src="https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?auto=format&fit=crop&w=900&q=85"
+                alt="Gaming controller in a colorful setup"
+                loading="lazy"
+              >
+              <span class="game-category">ADVENTURE</span>
+            </div>
+            <div class="game-info">
+              <div>
+                <h3>Minecraft</h3>
+                <p>Sandbox · Creative</p>
+              </div>
+              <span class="game-arrow">↗</span>
+            </div>
+          </article>
+
+          <article class="game-card reveal" data-category="sports">
+            <div class="game-image">
+              <img
+                src="https://images.unsplash.com/photo-1518091043644-c1d4457512c6?auto=format&fit=crop&w=900&q=85"
+                alt="Football stadium"
+                loading="lazy"
+              >
+              <span class="game-category">SPORTS</span>
+            </div>
+            <div class="game-info">
+              <div>
+                <h3>EA Sports FC</h3>
+                <p>Football · Sports</p>
+              </div>
+              <span class="game-arrow">↗</span>
+            </div>
+          </article>
+
+          <article class="game-card reveal" data-category="sports">
+            <div class="game-image">
+              <img
+                src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=900&q=85"
+                alt="Sports car on a race track"
+                loading="lazy"
+              >
+              <span class="game-category">RACING</span>
+            </div>
+            <div class="game-info">
+              <div>
+                <h3>Forza Horizon</h3>
+                <p>Racing · Open World</p>
+              </div>
+              <span class="game-arrow">↗</span>
+            </div>
+          </article>
+
+          <article class="game-card reveal" data-category="action">
+            <div class="game-image">
+              <img
+                src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&w=900&q=85"
+                alt="Gaming console and controller"
+                loading="lazy"
+              >
+              <span class="game-category">ACTION</span>
+            </div>
+            <div class="game-info">
+              <div>
+                <h3>Explore More</h3>
+                <p>Discover your next favorite</p>
+              </div>
+              <span class="game-arrow">↗</span>
+            </div>
+          </article>
+
+        </div>
+
+        <p class="games-note">
+          GAME IMAGES ARE ILLUSTRATIVE. GAME TITLES ARE PROPERTY OF THEIR RESPECTIVE OWNERS.
+        </p>
+      </div>
+    </section>
+
+    <!-- COMMUNITY -->
+    <section class="community-section" id="community">
+      <div class="container community-content">
+        <div class="community-visual reveal">
+          <div class="community-image">
+            <img
+              src="https://images.unsplash.com/photo-152 gaming"
+              alt="Gaming community"
+              onerror="this.style.display='none'"
+              loading="lazy"
+            >
+            <div class="community-image-placeholder">
+              <span>GH<span>.</span></span>
+              <small>YOUR COMMUNITY STARTS HERE</small>
+            </div>
+          </div>
+          <div class="community-stamp">
+            <strong>PLAY</strong>
+            <span>TOGETHER</span>
+          </div>
+        </div>
+
+        <div class="community-text reveal">
+          <span class="section-kicker">02 / MORE THAN A GAME</span>
+          <h2>GAMING IS<br><span>BETTER TOGETHER.</span></h2>
+          <p>
+            Find people who share your passion. Whether you want to
+            compete, cooperate or simply talk about your favorite games,
+            GameHub is the place to connect.
+          </p>
+
+          <div class="community-features">
+            <div class="community-feature">
+              <span>01</span>
+              <div>
+                <strong>FIND YOUR SQUAD</strong>
+                <small>Meet players with similar interests.</small>
+              </div>
+            </div>
+            <div class="community-feature">
+              <span>02</span>
+              <div>
+                <strong>SHARE YOUR PASSION</strong>
+                <small>Talk about games, strategies and more.</small>
+              </div>
+            </div>
+            <div class="community-feature">
+              <span>03</span>
+              <div>
+                <strong>PLAY YOUR WAY</strong>
+                <small>Discover new experiences together.</small>
+              </div>
+            </div>
+          </div>
+
+          <a href="#join" class="button button-primary">
+            BECOME A MEMBER <span>↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- JOIN -->
+    <section class="section join-section" id="join">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <span class="section-kicker">03 / CREATE YOUR ACCOUNT</span>
+            <h2>YOUR JOURNEY<br><span>STARTS HERE.</span></h2>
+          </div>
+          <p>
+            Create your player profile and tell us what you love to play.
+            Your next gaming experience is waiting.
+          </p>
+        </div>
+
+        <div class="join-layout">
+          <div class="join-intro reveal">
+            <span class="join-number">GAMEHUB / PLAYER REGISTRATION</span>
+            <h3>READY TO<br> <span>LEVEL UP?</span></h3>
             <p>
-                Unite a una comunidad de jugadores, descubrí nuevos
-                videojuegos y conectate con personas que comparten
-                tu pasión por el gaming.
+              Join the community, discover new games and connect
+              with players who share your interests.
             </p>
 
-            <a href="#registro">
-                <button type="button">Join the community</button>
-            </a>
-        </section>
+            <div class="join-benefit">
+              <span>✦</span>
+              <div>
+                <strong>YOUR GAMING PROFILE</strong>
+                <small>Tell the community who you are.</small>
+              </div>
+            </div>
 
-        <!-- REGISTRO -->
-        <section id="registro">
+            <div class="join-benefit">
+              <span>✦</span>
+              <div>
+                <strong>YOUR FAVORITE GAMES</strong>
+                <small>Choose the games you enjoy most.</small>
+              </div>
+            </div>
 
-            <h2>Create your account</h2>
-            <p>Completá tus datos para formar parte de GAMEHUB.</p>
+            <div class="join-benefit">
+              <span>✦</span>
+              <div>
+                <strong>YOUR COMMUNITY</strong>
+                <small>Start connecting with other gamers.</small>
+              </div>
+            </div>
+          </div>
 
-            <form action="TU_ENDPOINT_REGISTRO" method="POST">
+          <form class="join-form reveal" id="joinForm">
+            <div class="form-heading">
+              <span>PLAYER REGISTRATION</span>
+              <span class="form-step">01 — 01</span>
+            </div>
 
-                <!-- DATOS PERSONALES -->
-                <fieldset>
-                    <legend>01 — Datos personales</legend>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">FIRST NAME</label>
+                <input type="text" id="firstName" name="firstName" placeholder="Your name" required minlength="2">
+              </div>
 
-                    <label for="nombre">Nombre completo</label>
-                    <input
-                        type="text"
-                        id="nombre"
-                        name="nombre"
-                        placeholder="Ej: Tomás Sosa"
-                        autocomplete="name"
-                        minlength="3"
-                        maxlength="60"
-                        required>
+              <div class="form-group">
+                <label for="username">GAMER TAG</label>
+                <input type="text" id="username" name="username" placeholder="Your username" required minlength="3">
+              </div>
+            </div>
 
-                    <label for="email">Correo electrónico</label>
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="nombre@email.com"
-                        autocomplete="email"
-                        required>
+            <div class="form-group">
+              <label for="email">EMAIL ADDRESS</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required>
+            </div>
 
-                    <label for="password">Contraseña</label>
-                    <input
-                        type="password"
-                        id="password"
-                        name="password"
-                        placeholder="Mínimo 8 caracteres"
-                        autocomplete="new-password"
-                        minlength="8"
-                        maxlength="30"
-                        required>
+            <div class="form-group">
+              <label for="platform">YOUR MAIN PLATFORM</label>
+              <select id="platform" name="platform" required>
+                <option value="" disabled selected>Select your platform</option>
+                <option value="PlayStation">PlayStation</option>
+                <option value="Xbox">Xbox</option>
+                <option value="PC">PC</option>
+                <option value="Nintendo Switch">Nintendo Switch</option>
+                <option value="Mobile">Mobile</option>
+              </select>
+            </div>
 
-                    <label for="edad">Edad</label>
-                    <input
-                        type="number"
-                        id="edad"
-                        name="edad"
-                        min="13"
-                        max="100"
-                        placeholder="18"
-                        required>
-
-                    <label for="nacimiento">Fecha de nacimiento</label>
-                    <input
-                        type="date"
-                        id="nacimiento"
-                        name="fecha_nacimiento"
-                        autocomplete="bday"
-                        required>
-
-                </fieldset>
-
-                <!-- INFORMACIÓN DE USUARIO -->
-                <fieldset>
-                    <legend>02 — Información de usuario</legend>
-
-                    <label for="usuario">Nombre de usuario</label>
-                    <input
-                        type="text"
-                        id="usuario"
-                        name="usuario"
-                        placeholder="Entre 5 y 12 caracteres"
-                        pattern="[A-Za-z0-9]{5,12}"
-                        minlength="5"
-                        maxlength="12"
-                        title="Usá entre 5 y 12 letras o números, sin espacios."
-                        required>
-
-                    <label for="pais">País</label>
-                    <select id="pais" name="pais" required>
-                        <option value="">Seleccioná tu país</option>
-                        <option value="Argentina">Argentina</option>
-                        <option value="Uruguay">Uruguay</option>
-                        <option value="Chile">Chile</option>
-                        <option value="Brasil">Brasil</option>
-                        <option value="Paraguay">Paraguay</option>
-                        <option value="Otro">Otro</option>
-                    </select>
-
-                    <label for="ciudad">Ciudad de residencia</label>
-                    <input
-                        type="text"
-                        id="ciudad"
-                        name="ciudad"
-                        list="ciudades"
-                        placeholder="Escribí tu ciudad"
-                        autocomplete="address-level2"
-                        required>
-
-                    <datalist id="ciudades">
-                        <option value="Buenos Aires">
-                        <option value="Córdoba">
-                        <option value="Rosario">
-                        <option value="Mendoza">
-                        <option value="Montevideo">
-                        <option value="Santiago">
-                    </datalist>
-
-                </fieldset>
-
-                <!-- PREFERENCIAS -->
-                <fieldset>
-                    <legend>03 — Gaming preferences</legend>
-
-                    <p>Género</p>
-
-                    <label class="opcion">
-                        <input
-                            type="radio"
-                            name="genero"
-                            value="Masculino"
-                            required>
-                        Masculino
-                    </label>
-
-                    <label class="opcion">
-                        <input
-                            type="radio"
-                            name="genero"
-                            value="Femenino">
-                        Femenino
-                    </label>
-
-                    <label class="opcion">
-                        <input
-                            type="radio"
-                            name="genero"
-                            value="Otro">
-                        Otro
-                    </label>
-
-                    <label class="opcion">
-                        <input
-                            type="radio"
-                            name="genero"
-                            value="Prefiero no decirlo">
-                        Prefiero no decirlo
-                    </label>
-
-                    <p>Videojuegos favoritos</p>
-
-                    <label class="opcion">
-                        <input
-                            type="checkbox"
-                            name="intereses"
-                            value="FIFA">
-                        EA Sports FC
-                    </label>
-
-                    <label class="opcion">
-                        <input
-                            type="checkbox"
-                            name="intereses"
-                            value="Fortnite">
-                        Fortnite
-                    </label>
-
-                    <label class="opcion">
-                        <input
-                            type="checkbox"
-                            name="intereses"
-                            value="Minecraft">
-                        Minecraft
-                    </label>
-
-                    <label class="opcion">
-                        <input
-                            type="checkbox"
-                            name="intereses"
-                            value="GTA">
-                        GTA
-                    </label>
-
-                    <label class="opcion">
-                        <input
-                            type="checkbox"
-                            name="intereses"
-                            value="Formula 1">
-                        Formula 1
-                    </label>
-
-                    <label for="biografia">Contanos sobre vos</label>
-                    <textarea
-                        id="biografia"
-                        name="biografia"
-                        rows="4"
-                        placeholder="¿Cuáles son tus juegos favoritos?"
-                        minlength="10"
-                        maxlength="300"></textarea>
-
-                </fieldset>
-
-                <button type="submit">
-                    Create account →
-                </button>
-
-            </form>
-        </section>
-
-        <!-- CONTACTO -->
-        <section id="contacto">
-
-            <h2>Need some help?</h2>
-            <p>Contactate con nuestro equipo de soporte.</p>
-
-            <form action="TU_ENDPOINT_CONTACTO" method="POST">
-
-                <label for="contacto-nombre">Nombre</label>
-                <input
-                    type="text"
-                    id="contacto-nombre"
-                    name="nombre"
-                    placeholder="Tu nombre"
-                    autocomplete="name"
-                    required>
-
-                <label for="contacto-email">Correo electrónico</label>
-                <input
-                    type="email"
-                    id="contacto-email"
-                    name="email"
-                    placeholder="Tu correo electrónico"
-                    autocomplete="email"
-                    required>
-
-                <label for="motivo">Motivo de contacto</label>
-                <select id="motivo" name="motivo" required>
-                    <option value="">Seleccioná un motivo</option>
-                    <option value="Problema con mi cuenta">
-                        Problema con mi cuenta
-                    </option>
-                    <option value="Problema técnico">
-                        Problema técnico
-                    </option>
-                    <option value="Consulta">
-                        Consulta
-                    </option>
-                    <option value="Otro">
-                        Otro
-                    </option>
-                </select>
-
-                <label for="mensaje">Mensaje</label>
-                <textarea
-                    id="mensaje"
-                    name="mensaje"
-                    rows="5"
-                    placeholder="Describí tu problema..."
-                    minlength="10"
-                    maxlength="1000"
-                    required></textarea>
-
-                <label class="opcion">
-                    <input
-                        type="checkbox"
-                        id="terminos"
-                        name="acepto_terminos"
-                        value="Sí"
-                        required>
-                    Acepto los términos y condiciones
+            <div class="form-group">
+              <label>WHAT GENRES DO YOU LIKE?</label>
+              <div class="genre-options">
+                <label class="genre-option">
+                  <input type="checkbox" name="genres" value="Action">
+                  <span>Action</span>
                 </label>
+                <label class="genre-option">
+                  <input type="checkbox" name="genres" value="Sports">
+                  <span>Sports</span>
+                </label>
+                <label class="genre-option">
+                  <input type="checkbox" name="genres" value="Racing">
+                  <span>Racing</span>
+                </label>
+                <label class="genre-option">
+                  <input type="checkbox" name="genres" value="Adventure">
+                  <span>Adventure</span>
+                </label>
+                <label class="genre-option">
+                  <input type="checkbox" name="genres" value="Strategy">
+                  <span>Strategy</span>
+                </label>
+                <label class="genre-option">
+                  <input type="checkbox" name="genres" value="Survival">
+                  <span>Survival</span>
+                </label>
+              </div>
+            </div>
 
-                <button type="submit">
-                    Send message →
-                </button>
+            <label class="terms-option">
+              <input type="checkbox" id="terms" required>
+              <span>I agree to the terms and conditions.</span>
+            </label>
 
-            </form>
-        </section>
+            <button type="submit" class="button button-primary form-submit">
+              CREATE MY ACCOUNT <span>↗</span>
+            </button>
 
-    </main>
+            <p class="form-message" id="joinMessage" aria-live="polite"></p>
+            <small class="form-disclaimer">
+              DEMO REGISTRATION — YOUR INFORMATION IS NOT SENT TO A SERVER.
+            </small>
+          </form>
+        </div>
+      </div>
+    </section>
 
-    <!-- FOOTER -->
-    <footer>
-        <h2>GAMEHUB</h2>
+    <!-- SUPPORT -->
+    <section class="support-section" id="support">
+      <div class="container support-layout">
+        <div class="support-text reveal">
+          <span class="section-kicker">04 / WE'RE HERE TO HELP</span>
+          <h2>NEED A<br><span>HAND?</span></h2>
+          <p>
+            Have a question, suggestion or problem? Send us a message.
+            The GameHub team is ready to help.
+          </p>
 
-        <p>Your Gaming Universe.</p>
+          <div class="support-contact">
+            <span class="support-icon">✉</span>
+            <div>
+              <small>CONTACT</small>
+              <strong>support@gamehub.com</strong>
+            </div>
+          </div>
 
-        <p>
-            © 2026 GAMEHUB.
-            All rights reserved.
-        </p>
-    </footer>
+          <div class="support-contact">
+            <span class="support-icon">◷</span>
+            <div>
+              <small>AVAILABILITY</small>
+              <strong>Always here for gamers</strong>
+            </div>
+          </div>
+        </div>
 
-    <!-- JAVASCRIPT -->
-    <script src="js/script.js"></script>
+        <form class="support-form reveal" id="supportForm">
+          <div class="form-heading">
+            <span>SEND A MESSAGE</span>
+            <span class="form-step">SUPPORT / 01</span>
+          </div>
+
+          <div class="form-group">
+            <label for="supportName">YOUR NAME</label>
+            <input type="text" id="supportName" name="supportName" placeholder="Enter your name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="supportEmail">EMAIL ADDRESS</label>
+            <input type="email" id="supportEmail" name="supportEmail" placeholder="you@example.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="subject">SUBJECT</label>
+            <select id="subject" name="subject" required>
+              <option value="" disabled selected>Choose a topic</option>
+              <option value="Account">Account</option>
+              <option value="Games">Games</option>
+              <option value="Community">Community</option>
+              <option value="Technical issue">Technical issue</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">MESSAGE</label>
+            <textarea id="message" name="message" rows="4" placeholder="How can we help you?" required minlength="10"></textarea>
+          </div>
+
+          <button type="submit" class="button button-primary form-submit">
+            SEND MESSAGE <span>↗</span>
+          </button>
+
+          <p class="form-message" id="supportMessage" aria-live="polite"></p>
+          <small class="form-disclaimer">
+            DEMO CONTACT FORM — MESSAGES ARE NOT SENT TO A SERVER.
+          </small>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#home" class="logo">GAME<span>HUB</span><span class="logo-dot">.</span></a>
+          <p>
+            One community. Countless adventures.<br>
+            Your gaming world starts here.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h4>EXPLORE</h4>
+          <a href="#home">Home</a>
+          <a href="#games">Discover Games</a>
+          <a href="#community">Community</a>
+        </div>
+
+        <div class="footer-column">
+          <h4>COMMUNITY</h4>
+          <a href="#join">Create Account</a>
+          <a href="#support">Support</a>
+          <a href="#games">Game Collection</a>
+        </div>
+
+        <div class="footer-column">
+          <h4>THE GAMEHUB MISSION</h4>
+          <span>Play together.</span>
+          <span>Discover more.</span>
+          <span>Level up.</span>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 GAMEHUB. ALL RIGHTS RESERVED.</span>
+        <span>DESIGNED FOR THE <strong>GAMING COMMUNITY.</strong></span>
+        <a href="#home">BACK TO TOP ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 </body>
 </html>
-
